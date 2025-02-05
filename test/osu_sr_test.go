@@ -1,9 +1,9 @@
 package test
 
 import (
-	"github.com/Wieku/gosu-pp/beatmap"
-	"github.com/Wieku/gosu-pp/beatmap/difficulty"
-	"github.com/Wieku/gosu-pp/performance/osu"
+	"github.com/lekluge/gosu-pp/beatmap"
+	"github.com/lekluge/gosu-pp/beatmap/difficulty"
+	"github.com/lekluge/gosu-pp/performance/osu"
 	"os"
 	"testing"
 )

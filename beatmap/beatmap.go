@@ -1,9 +1,9 @@
 package beatmap
 
 import (
-	"github.com/Wieku/gosu-pp/beatmap/difficulty"
-	"github.com/Wieku/gosu-pp/beatmap/objects"
-	"github.com/Wieku/gosu-pp/beatmap/timing"
+	"github.com/lekluge/gosu-pp/beatmap/difficulty"
+	"github.com/lekluge/gosu-pp/beatmap/objects"
+	"github.com/lekluge/gosu-pp/beatmap/timing"
 	"math"
 	"strconv"
 	"strings"

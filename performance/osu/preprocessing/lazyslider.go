@@ -1,9 +1,9 @@
 package preprocessing
 
 import (
-	"github.com/Wieku/gosu-pp/beatmap/difficulty"
-	"github.com/Wieku/gosu-pp/beatmap/objects"
-	"github.com/Wieku/gosu-pp/math/vector"
+	"github.com/lekluge/gosu-pp/beatmap/difficulty"
+	"github.com/lekluge/gosu-pp/beatmap/objects"
+	"github.com/lekluge/gosu-pp/math/vector"
 	"math"
 )
 

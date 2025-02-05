@@ -1,8 +1,8 @@
 package osu
 
 import (
-	"github.com/Wieku/gosu-pp/beatmap/difficulty"
-	"github.com/Wieku/gosu-pp/math/mutils"
+	"github.com/lekluge/gosu-pp/beatmap/difficulty"
+	"github.com/lekluge/gosu-pp/math/mutils"
 	"math"
 )
 

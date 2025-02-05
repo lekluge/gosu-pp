@@ -1,9 +1,9 @@
 package curves
 
 import (
-	"github.com/Wieku/gosu-pp/math/math32"
-	"github.com/Wieku/gosu-pp/math/mutils"
-	"github.com/Wieku/gosu-pp/math/vector"
+	"github.com/lekluge/gosu-pp/math/math32"
+	"github.com/lekluge/gosu-pp/math/mutils"
+	"github.com/lekluge/gosu-pp/math/vector"
 )
 
 type Bezier struct {

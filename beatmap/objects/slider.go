@@ -1,12 +1,12 @@
 package objects
 
 import (
-	"github.com/Wieku/gosu-pp/beatmap/audio"
-	"github.com/Wieku/gosu-pp/beatmap/difficulty"
-	"github.com/Wieku/gosu-pp/beatmap/timing"
-	"github.com/Wieku/gosu-pp/math/curves"
-	"github.com/Wieku/gosu-pp/math/mutils"
-	"github.com/Wieku/gosu-pp/math/vector"
+	"github.com/lekluge/gosu-pp/beatmap/audio"
+	"github.com/lekluge/gosu-pp/beatmap/difficulty"
+	"github.com/lekluge/gosu-pp/beatmap/timing"
+	"github.com/lekluge/gosu-pp/math/curves"
+	"github.com/lekluge/gosu-pp/math/mutils"
+	"github.com/lekluge/gosu-pp/math/vector"
 	"math"
 	"sort"
 	"strconv"
