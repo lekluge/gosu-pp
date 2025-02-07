@@ -43,7 +43,9 @@ type PPv2 struct {
 func (pp *PPv2) PPv2x(attribs Attributes, combo, n300, n100, n50, nmiss int, diff *difficulty.Difficulty) PPv2 {
 	attribs.MaxCombo = mutils.MaxI(1, attribs.MaxCombo)
 
-	combo = attribs.MaxCombo
+	if combo < 0 {
+		combo = attribs.MaxCombo
+	}
 
 	if n300 < 0 {
 		n300 = attribs.ObjectCount - n100 - n50 - nmiss
@@ -135,9 +137,9 @@ func (pp *PPv2) computeAimValue() float64 {
 	}
 
 	// Combo scaling
-	if pp.attribs.MaxCombo > 0 {
-		aimValue *= math.Min(math.Pow(float64(pp.scoreMaxCombo), 0.8)/math.Pow(float64(pp.attribs.MaxCombo), 0.8), 1.0)
-	}
+	// if pp.attribs.MaxCombo > 0 {
+	// 	aimValue *= math.Min(math.Pow(float64(pp.scoreMaxCombo), 0.8)/math.Pow(float64(pp.attribs.MaxCombo), 0.8), 1.0)
+	// }
 
 	approachRateFactor := 0.0
 	if pp.diff.ARReal > 10.33 {
@@ -186,9 +188,9 @@ func (pp *PPv2) computeSpeedValue() float64 {
 	}
 
 	// Combo scaling
-	if pp.attribs.MaxCombo > 0 {
-		speedValue *= math.Min(math.Pow(float64(pp.scoreMaxCombo), 0.8)/math.Pow(float64(pp.attribs.MaxCombo), 0.8), 1.0)
-	}
+	// if pp.attribs.MaxCombo > 0 {
+	// 	speedValue *= math.Min(math.Pow(float64(pp.scoreMaxCombo), 0.8)/math.Pow(float64(pp.attribs.MaxCombo), 0.8), 1.0)
+	// }
 
 	approachRateFactor := 0.0
 	if pp.diff.ARReal > 10.33 {
@@ -274,9 +276,9 @@ func (pp *PPv2) computeFlashlightValue() float64 {
 	}
 
 	// Combo scaling.
-	if pp.attribs.MaxCombo > 0 {
-		flashlightValue *= math.Min(math.Pow(float64(pp.scoreMaxCombo), 0.8)/math.Pow(float64(pp.attribs.MaxCombo), 0.8), 1.0)
-	}
+	// if pp.attribs.MaxCombo > 0 {
+	// 	flashlightValue *= math.Min(math.Pow(float64(pp.scoreMaxCombo), 0.8)/math.Pow(float64(pp.attribs.MaxCombo), 0.8), 1.0)
+	// }
 
 	// Account for shorter maps having a higher ratio of 0 combo/100 combo flashlight radius.
 	scale := 0.7 + 0.1*math.Min(1.0, float64(pp.totalHits)/200.0)
