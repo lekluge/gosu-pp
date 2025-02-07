@@ -1,9 +1,10 @@
 package osu
 
 import (
+	"math"
+
 	"github.com/lekluge/gosu-pp/beatmap/difficulty"
 	"github.com/lekluge/gosu-pp/math/mutils"
-	"math"
 )
 
 /* ------------------------------------------------------------- */
@@ -42,9 +43,7 @@ type PPv2 struct {
 func (pp *PPv2) PPv2x(attribs Attributes, combo, n300, n100, n50, nmiss int, diff *difficulty.Difficulty) PPv2 {
 	attribs.MaxCombo = mutils.MaxI(1, attribs.MaxCombo)
 
-	if combo < 0 {
-		combo = attribs.MaxCombo
-	}
+	combo = attribs.MaxCombo
 
 	if n300 < 0 {
 		n300 = attribs.ObjectCount - n100 - n50 - nmiss
